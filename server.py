@@ -18,7 +18,7 @@ AWESOMENESS = [
 def start_here():
     """Home page."""
 
-    return "<!doctype html><html>Hi! This is the home page.</html>"
+    return "<!doctype html><html>Hi! This is the home page.<a href='/hello'> Hello </a></html>"
 
 
 @app.route('/hello')
@@ -35,11 +35,31 @@ def say_hello():
         <h1>Hi There!</h1>
         <form action="/greet">
           What's your name? <input type="text" name="person">
+          <label for="compliments"> Choose your compliment: </label>
+          <select name="compliment" id="compliment-select">
+            <option value="awesome"> Awesome </option>
+            <option value="terrific"> Terrific </option>
+            <option value="fantastic"> Fantastic </option>
+          </select>
           <input type="submit" value="Submit">
         </form>
       </body>
     </html>
     """
+
+
+<form>
+  <label for="lang-select">Choose your main programming language:</label>
+
+  <select name="lang" id="lang-select">
+    <option value="python">Python</option>
+    <option value="javascript">JavaScript</option>
+    <option value="ruby">Ruby</option>
+  </select>
+</form>
+
+
+
 
 
 @app.route('/greet')
